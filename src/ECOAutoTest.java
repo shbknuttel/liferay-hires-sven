@@ -37,6 +37,10 @@ public class ECOAutoTest {
         // Click on Calculate
         WebElement Calculate = driver.findElement(By.name("Submit"));
         Calculate.submit();
+        // Compare Result Expected = Actual
+        String ActualResult = driver.findElement(By.cssSelector("td.SubHead b")).getText();
+        Assert.assertEquals("ERROR! PLEASE INPUT LEAVING DATE & TIME", ActualResult);
+        System.out.println("Status LR-ECO-XXX: PASSED");
         Thread.sleep(4000);
         // Close Browser
         driver.close();
