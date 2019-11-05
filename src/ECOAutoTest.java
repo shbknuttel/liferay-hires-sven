@@ -14,6 +14,10 @@ public class ECOAutoTest {
         driver.get("http://www.shino.de/parkcalc/index.php");
         // Open the Dropdown and Select "Economy Parking"
         driver.findElement(By.cssSelector("option[value='Economy']")).click();
+        // Input of Start Date
+        WebElement StartDate = driver.findElement(By.id("StartingDate"));
+        StartDate.clear();
+        StartDate.sendKeys("11/4/2019");
         Thread.sleep(4000);
 
         // Close Browser
