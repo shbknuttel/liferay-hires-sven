@@ -41,7 +41,6 @@ public class LTGAutoTest {
         String ActualResult = driver.findElement(By.cssSelector("span.SubHead b")).getText();
         Assert.assertEquals("$ 2.00", ActualResult);
         System.out.println("Status LRSV-LTG-004: PASSED");
-
         Thread.sleep(4000);
         // Close Browser
         driver.close();
