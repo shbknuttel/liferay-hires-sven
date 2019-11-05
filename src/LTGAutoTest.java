@@ -24,6 +24,17 @@ public class LTGAutoTest {
         StartingTime.sendKeys("01:00");
         // Select Radio button "PM"
         driver.findElement(By.cssSelector("input[name='StartingTimeAMPM'][type='radio'][value='PM']")).click();
+        // Input of LeavingDate
+        WebElement LeavingDate = driver.findElement(By.id("LeavingDate"));
+        LeavingDate.clear();
+        LeavingDate.sendKeys("11/4/2019");
+        // Input of Leaving Time
+        WebElement LeavingTime = driver.findElement(By.id("LeavingTime"));
+        LeavingTime.clear();
+        LeavingTime.sendKeys("02:00");
+        // Select Radio button "PM"
+        driver.findElement(By.cssSelector("input[name='LeavingTimeAMPM'][type='radio'][value='PM']")).click();
+
         Thread.sleep(4000);
         // Close Browser
         driver.close();
