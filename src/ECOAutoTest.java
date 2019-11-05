@@ -24,6 +24,14 @@ public class ECOAutoTest {
         StartingTime.sendKeys("01:00");
         // Select Radio button "PM"
         driver.findElement(By.cssSelector("input[name='StartingTimeAMPM'][type='radio'][value='PM']")).click();
+        // Input of LeavingDate
+        WebElement LeavingDate = driver.findElement(By.id("LeavingDate"));
+        LeavingDate.clear();
+        LeavingDate.sendKeys(" ");
+        // Input of Leaving Time
+        WebElement LeavingTime = driver.findElement(By.id("LeavingTime"));
+        LeavingTime.clear();
+        LeavingTime.sendKeys(" ");
         Thread.sleep(4000);
 
         // Close Browser
