@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class LTGAutoTest {
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args){
         // Set the property for webdriver.chrome.driver , local path to your ChromeDriver
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\Dell\\IdeaProjects\\Sven\\chromedriver_win32\\chromedriver.exe");
         // Create new instance of ChromeDriver
@@ -41,7 +41,6 @@ public class LTGAutoTest {
         String ActualResult = driver.findElement(By.cssSelector("span.SubHead b")).getText();
         Assert.assertEquals("$ 2.00", ActualResult);
         System.out.println("Status LRSV-LTG-004: PASSED");
-        Thread.sleep(4000);
         // Close Browser
         driver.close();
     }
