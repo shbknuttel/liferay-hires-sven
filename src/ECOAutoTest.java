@@ -18,9 +18,14 @@ public class ECOAutoTest {
         WebElement StartDate = driver.findElement(By.id("StartingDate"));
         StartDate.clear();
         StartDate.sendKeys("11/4/2019");
+        // Input of Start Time
+        WebElement StartingTime = driver.findElement(By.id("StartingTime"));
+        StartingTime.clear();
+        StartingTime.sendKeys("01:00");
+        
         Thread.sleep(4000);
 
         // Close Browser
-        driver.quit();
+        driver.close();
     }
 }
