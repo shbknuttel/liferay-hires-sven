@@ -32,8 +32,12 @@ public class ECOAutoTest {
         WebElement LeavingTime = driver.findElement(By.id("LeavingTime"));
         LeavingTime.clear();
         LeavingTime.sendKeys(" ");
+        // Select Radio button "PM"
+        driver.findElement(By.cssSelector("input[name='LeavingTimeAMPM'][type='radio'][value='PM']")).click();
+        // Click on Calculate
+        WebElement Calculate = driver.findElement(By.name("Submit"));
+        Calculate.submit();
         Thread.sleep(4000);
-
         // Close Browser
         driver.close();
     }
