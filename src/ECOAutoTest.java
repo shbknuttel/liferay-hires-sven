@@ -5,14 +5,17 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class ECOAutoTest {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         // Set the property for webdriver.chrome.driver , local path to your ChromeDriver
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\Dell\\IdeaProjects\\Sven\\chromedriver_win32\\chromedriver.exe");
         // Create new instance of ChromeDriver
         WebDriver driver = new ChromeDriver();
         // Visit Parking Cost Calculator
         driver.get("http://www.shino.de/parkcalc/index.php");
-        
+        // Open the Dropdown and Select "Economy Parking"
+        driver.findElement(By.cssSelector("option[value='Economy']")).click();
+        Thread.sleep(4000);
+
         // Close Browser
         driver.quit();
     }
