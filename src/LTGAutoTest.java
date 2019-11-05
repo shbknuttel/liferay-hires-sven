@@ -12,6 +12,8 @@ public class LTGAutoTest {
         WebDriver driver = new ChromeDriver();
         // Visit Parking Cost Calculator
         driver.get("http://www.shino.de/parkcalc/index.php");
+        // Open the Dropdown and Select "Long-Term Garage Parking"
+        driver.findElement(By.cssSelector("option[value='Long-Garage']")).click();
         Thread.sleep(4000);
         // Close Browser
         driver.quit();
