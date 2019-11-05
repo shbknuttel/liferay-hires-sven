@@ -5,7 +5,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 
 public class ECOAutoTest {
-    public static void main(String[] args) throws InterruptedException {
+    public static void main(String[] args){
         // Set the property for webdriver.chrome.driver , local path to your ChromeDriver
         System.setProperty("webdriver.chrome.driver", "C:\\Users\\Dell\\IdeaProjects\\Sven\\chromedriver_win32\\chromedriver.exe");
         // Create new instance of ChromeDriver
@@ -40,8 +40,7 @@ public class ECOAutoTest {
         // Compare Result Expected = Actual
         String ActualResult = driver.findElement(By.cssSelector("td.SubHead b")).getText();
         Assert.assertEquals("ERROR! PLEASE INPUT LEAVING DATE & TIME", ActualResult);
-        System.out.println("Status LR-ECO-XXX: PASSED");
-        Thread.sleep(4000);
+        System.out.println("Status LR-ECO-020: PASSED");
         // Close Browser
         driver.close();
     }

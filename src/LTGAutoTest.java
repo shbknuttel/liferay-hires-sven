@@ -34,6 +34,13 @@ public class LTGAutoTest {
         LeavingTime.sendKeys("02:00");
         // Select Radio button "PM"
         driver.findElement(By.cssSelector("input[name='LeavingTimeAMPM'][type='radio'][value='PM']")).click();
+        // Click on Calculate
+        WebElement Calculate = driver.findElement(By.name("Submit"));
+        Calculate.submit();
+        // Compare Result Expected = Actual
+        String ActualResult = driver.findElement(By.cssSelector("span.SubHead b")).getText();
+        Assert.assertEquals("$ 2.00", ActualResult);
+        System.out.println("Status LRSV-LTG-004: PASSED");
 
         Thread.sleep(4000);
         // Close Browser
